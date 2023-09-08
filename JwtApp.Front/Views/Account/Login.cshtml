@@ -1,0 +1,26 @@
+﻿@model LoginDto
+@{
+    Layout = null;
+}
+<div class="container">
+    <h2 style="text-align:center">Giriş Sayfası</h2>
+    <br />
+    <form method="post">
+        <div class="w-75 m-5 p-3 shadow mx-auto">
+            <label class="form-label">Kullanıcı Adınız</label>
+            <input type="text" asp-for="@Model.UserName" class="form-control"/>
+            <span asp-validation-for="@Model.Password"></span>
+
+
+        </div>
+        <br />
+        <div class="mb-3">
+            <lable class="form-label">Şifreniz</lable>
+            <input type="password" asp-for="@Model.Password" class="form-control"/>
+            <span asp-validation-for="@Model.Password"></span>
+        </div>
+        <br />
+        <button class="btn btn-success">Giriş Yap</button>
+        <div asp-validation-summary="ModelOnly"></div>
+    </form>
+</div>
